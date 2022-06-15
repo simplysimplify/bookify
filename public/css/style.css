@@ -1,0 +1,98 @@
+:root {
+    --primary: #d1c8c0;
+    --secondary: rgb(150, 140, 130);
+    --light: rgba(150, 140, 130, 0.3);
+    --dark: rgb(41, 39, 38);
+    --shadow: rgb(108, 107, 107);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary);
+    padding: 3rem;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 2px 3px rgb(108, 107, 107);
+    text-decoration: none;
+    color: white;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER =nav bar*/
+
+.header {
+    display: flex;
+    /* expands the uls and logo to the edges */
+    justify-content: space-between;
+    margin: 2rem;
+    padding: 2rem;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
+    color: black;
+    letter-spacing: 0.3rem; 
+    height: 12vh;
+} 
+
+.header div {
+    padding-top: 3rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    text-align: right;
+    display: inline;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
+    font-size: 2rem;
+    color: rgb(238, 231, 217);
+}
+
+.header div ul {
+    list-style-type: none;
+}
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: larger;
+};
+
+#logo {
+    width: 1rem;
+}
+
+#start-btn {
+    border: none;
+    background-color: white;
+    color: var(--dark);
+    padding: 14px 28px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
+}
+
+#start-btn:hover {
+    text-shadow: 2px 3px whitesmoke;
+    text-decoration: none;
+}
+
+#logo {
+    width: 45%;
+}
+
+#bookify-nav {
+    height: 100%;
+    filter: invert();
+}

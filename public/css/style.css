@@ -37,7 +37,8 @@ p {
     justify-content: space-between;
     margin: 2rem;
     padding: 2rem;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
     color: black;
     letter-spacing: 0.3rem; 
     height: 12vh;
@@ -49,7 +50,8 @@ p {
     margin-top: 2rem;
     text-align: right;
     display: inline;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
     font-size: 2rem;
     color: rgb(238, 231, 217);
 }
@@ -77,7 +79,8 @@ p {
     font-size: 2rem;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
 }
 
 #start-btn:hover {

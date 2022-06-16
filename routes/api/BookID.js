@@ -1,6 +1,11 @@
 const router = require('express').Router();
 const axios = require('axios');
 
+// Link to the rapidapi documentation.
+// https://rapidapi.com/roftcomp-laGmBwlWLm/api/hapi-books/
+
+
+// Sets options variable for the book api url call.
 const options = {
   method: "GET",
   headers: {
@@ -19,4 +24,4 @@ router.get('/:bookID', async (req, res) => {
   }
 })
 
-module.exports = router; 
+module.exports = router;

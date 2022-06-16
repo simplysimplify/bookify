@@ -9,6 +9,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
 }
 
 body {
@@ -20,14 +22,14 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-shadow: 2px 3px rgb(108, 107, 107);
+    text-shadow: 2px 3px white;
     text-decoration: none;
     color: white;
 }
-p {
+/* p {
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
-}
+} */
 
 /* HEADER =nav bar*/
 
@@ -71,8 +73,9 @@ p {
     width: 1rem;
 }
 
-#start-btn {
+.btn {
     border: none;
+    border-radius: 3mm;
     background-color: white;
     color: var(--dark);
     padding: 14px 28px;
@@ -95,4 +98,18 @@ p {
 #bookify-nav {
     height: 100%;
     filter: invert();
+}
+
+#book-quiz-container {
+    font-family: 'Gravitas One', cursive;
+    font-family: 'Rozha One', serif;
+    background-image: url("images/books.jpeg");
+    height:30rem;
+    border-radius: 5mm;
+}
+
+#book-quiz-container h1 {
+    font-size: 9rem;
+    color: black;
+    text-shadow: 2px 3px white;
 }

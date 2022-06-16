@@ -9,10 +9,10 @@ const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 6001;
 
 const sess = {
-  secret: "",
+  secret: "udon",
   cookie: {},
   resave: false,
   saveUninitialized: true,

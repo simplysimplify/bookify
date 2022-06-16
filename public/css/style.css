@@ -113,3 +113,14 @@ a:hover {
     color: black;
     text-shadow: 2px 3px white;
 }
+
+/*login/signUp cards*/
+/* .login-card{
+    background-color: black;
+    border-radius: 30%;
+    width: 30%;
+} */
+
+#email-signup{
+    margin-left: 5rem;
+}

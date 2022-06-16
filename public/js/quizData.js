@@ -71,9 +71,9 @@ function newQuestion() {
 }
 
 function newQuestion1() {
-      questionElement.textContent = questions[2].title;
+    questionElement.textContent = questions[2].title;
 
-      for (let i = 0; i < questions[2].choices.length; i++) {
+    for (let i = 0; i < questions[2].choices.length; i++) {
         let answerButton = document.createElement("button");
         answerButton.textContent = questions[2].choices[i];
         answerButton.setAttribute("class", "answer-button btn btn-light m-2 text-left");
@@ -84,9 +84,9 @@ function newQuestion1() {
 }
 
 function newQuestion2() {
-      questionElement.textContent = questions[2].title;
+    questionElement.textContent = questions[2].title;
 
-      for (let i = 0; i < questions[3].choices.length; i++) {
+    for (let i = 0; i < questions[3].choices.length; i++) {
         let answerButton = document.createElement("button");
         answerButton.textContent = questions[3].choices[i];
         answerButton.setAttribute("class", "answer-button btn btn-light m-2 text-left");
@@ -111,3 +111,12 @@ takeAgainButton.addEventListener("click", function () {
     questions = [question1, question2, question3, question4];
     startQuiz();
 })
+
+const userData = () => {
+    userMood = question1.answer
+    userSeries = question2.answer
+    userGenre = question3.answer
+    userFiction = question4.answer
+}
+
+module.exports = userData;

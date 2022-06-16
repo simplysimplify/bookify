@@ -15,23 +15,27 @@ const options = {
 };
 
 router.get('/:bookgenre', async (req, res) => {
+    // Clears variable to repopulate.
+  const response = []
   // Gets the top books in a genre in the current week.
   try {
     const response = await axios.get(`https://hapi-books.p.rapidapi.com/week/${req.params.bookgenre}`, options)
-    console.log(response)
+    console.log(response.data)
   } catch (err) {
     res.status(400).json(err)
   }
 })
 
 router.get('/:bookgenre', async (req, res) => {
+  // Clears variable to repopulate.
+  const response = []
   // Gets the top books in a genre in the current year.
   try {
-    const response = await axios.get(`'https://hapi-books.p.rapidapi.com/nominees/${req.params.bookgenre}/2022'`, options)
-    console.log(response)
+    const response = await axios.get(`https://hapi-books.p.rapidapi.com/nominees/${req.params.bookgenre}/2021`, options)
+    console.log(response.data)
   } catch (err) {
     res.status(400).json(err)
   }
 })
 
-module.exports = router; 
+module.exports = router;

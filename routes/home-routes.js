@@ -36,6 +36,7 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
     );
     console.log(response.data);
     res.render("genres", {
+      loggedIn: req.session.loggedIn,
       genre_name: req.params.genre_name,
       genreData: response.data,
     });

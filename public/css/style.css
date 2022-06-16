@@ -114,13 +114,73 @@ a:hover {
     text-shadow: 2px 3px white;
 }
 
+
+
 /*login/signUp cards*/
-/* .login-card{
-    background-color: black;
-    border-radius: 30%;
-    width: 30%;
-} */
+
+
+
+#username-signup{
+    background: hsl(0deg 0% 100%);
+        box-shadow: 0 0 1em var(--shadow);
+        padding: .1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 3mm;
+        color: hsl(0deg 0% 30%);
+        margin-top: -2em;
+    }
+    
+
 
 #email-signup{
-    margin-left: 5rem;
+        background: hsl(0deg 0% 100%);
+        box-shadow: 0 0 1em var(--shadow);
+        padding: .1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 3mm;
+        color: hsl(0deg 0% 30%);
+        margin-top: -2em;
+}
+    
+
+#password-signup{
+    background: hsl(0deg 0% 100%);
+        box-shadow: 0 0 1em var(--shadow);
+        padding: .1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 3mm;
+        color: hsl(0deg 0% 30%);
+        margin-top: -2em;
+    }
+
+
+#email-login {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 1em var(--shadow);
+    padding: .1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3mm;
+    color: hsl(0deg 0% 30%);
+    margin-top: -2em;
+}
+
+
+#password-login {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 1em var(--shadow);
+    padding: .1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3mm;
+    color: hsl(0deg 0% 30%);
+    margin-top: -2em;
 }

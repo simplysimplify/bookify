@@ -42,7 +42,6 @@ function startQuiz() {
     writeQuestion();
     createRestart();
     const quizStarted = true 
-    console.log(quizStarted)
 }
 
 function createRestart() {
@@ -91,7 +90,6 @@ function newQuestion1() {
         questionElement.appendChild(answerButton);
         answerButton.addEventListener("click", newQuestion2);
     }
-
 }
 
 function newQuestion2() {
@@ -104,7 +102,6 @@ function newQuestion2() {
         questionElement.appendChild(answerButton);
         answerButton.addEventListener("click", quizOver);
     }
-
 }
 
 // ends quiz
@@ -113,6 +110,13 @@ function quizOver() {
     questions = [question1, question2, question3, question4];
     body.removeChild(restartBtn)
     quizElement.style.display = "flex";
+    const userData =  [
+        userMood = question1.answer,
+        userSeries = question2.answer,
+        userGenre = question3.answer,
+        userFiction = question4.answer,
+    ]
+    console.log(userData)
     document.location.replace("/discover");
 }
 
@@ -121,12 +125,8 @@ function quizOver() {
 startButton.addEventListener("click", startQuiz)
 
 
-// const userData = () => {
-//     userMood = question1.answer
-//     userSeries = question2.answer
-//     userGenre = question3.answer
-//     userFiction = question4.answer
-// }
+
+
 
 
 // module.exports = userData;

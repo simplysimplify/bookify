@@ -22,6 +22,10 @@ router.get("/signUp", async (req, res) => {
   res.render("signUp", { loggedIn: req.session.loggedIn });
 });
 
+router.get("/bookLog", async (req, res) => {
+  res.render("bookLog", { loggedIn: req.session.loggedIn });
+});
+
 router.get("/discover/genre/:genre_name", async (req, res) => {
   try {
     const response = await axios.get(

@@ -103,7 +103,7 @@ a:hover {
 #book-quiz-container {
     font-family: 'Gravitas One', cursive;
     font-family: 'Rozha One', serif;
-    background-image: url("images/books.jpeg");
+    /* background-image: url("images/books.jpeg"); */
     height:30rem;
     border-radius: 5mm;
 }

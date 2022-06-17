@@ -5,14 +5,19 @@ let quizElement = document.querySelector(".quiz");
 let questionElement = document.getElementById("question");
 let answerButton = document.querySelectorAll(".answer-button");
 let quizOverElement = document.querySelector(".quiz-over");
-let takeAgainButton = document.getElementById("take-again");
-
+let quizStarted = false
+let body = document.body
+let restartBtn = document.createElement("a")
 
 //setting the start page
 quizElement.style.display = "none";
 // gameOverElement.style.display = "none";
 
+consoled()
 
+function consoled() {
+    console.log(quizStarted)
+}
 //question bank
 let question1 = {
     title: "What are you in the mood for?",
@@ -40,6 +45,17 @@ function startQuiz() {
     startScreen.style.display = "none";
     quizElement.style.display = "flex";
     writeQuestion();
+    createRestart();
+    const quizStarted = true 
+    console.log(quizStarted)
+}
+
+function createRestart() {
+    // <a href="/quiz" class="btn btn-lg col-md-3 mx-auto my-auto d-block">Restart?</a>
+    restartBtn.classList.add("btn", "btn-lg", "col-md-3", "mx-auto", "my-auto", "d-block")
+    restartBtn.setAttribute("href", "/quiz")
+    restartBtn.textContent = "Restart?"
+    body.appendChild(restartBtn)
 }
 
 // handles displaying a question
@@ -99,24 +115,21 @@ function newQuestion2() {
 // ends quiz
 function quizOver() {
     quizElement.style.display = "none"
-    quizOverElement.style.display = "flex";
     questions = [question1, question2, question3, question4];
+    body.removeChild(restartBtn)
 }
 
 
 
 startButton.addEventListener("click", startQuiz)
 
-takeAgainButton.addEventListener("click", function () {
-    questions = [question1, question2, question3, question4];
-    startQuiz();
-})
 
-const userData = () => {
-    userMood = question1.answer
-    userSeries = question2.answer
-    userGenre = question3.answer
-    userFiction = question4.answer
-}
+// const userData = () => {
+//     userMood = question1.answer
+//     userSeries = question2.answer
+//     userGenre = question3.answer
+//     userFiction = question4.answer
+// }
 
-module.exports = userData;
+
+// module.exports = userData;

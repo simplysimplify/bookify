@@ -11,7 +11,7 @@ let takeAgainButton = document.getElementById("take-again");
 //setting the start page
 quizElement.style.display = "none";
 // gameOverElement.style.display = "none";
-takeAgainButton.style.display = "none";
+
 
 //question bank
 let question1 = {
@@ -101,7 +101,7 @@ function quizOver() {
     quizElement.style.display = "none";
     quizOverElement.style.display = "flex";
     questions = [question1, question2, question3, question4];
-    takeAgainButton.style.display = "flex";
+    
 }
 
 

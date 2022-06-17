@@ -1,5 +1,8 @@
-<h1>{{genre_name}}</h1>
-{{#each genreData as |book|}}
-{{>bookdetails}}
-
-{{/each}}
+<h1>Top books this week in: {{genre_name}}</h1>
+<div class="container">
+    <div class="row">
+        {{#each genreData as |book|}}
+        {{>bookdetails}}
+        {{/each}}
+    </div>
+</div>

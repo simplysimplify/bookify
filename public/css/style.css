@@ -184,3 +184,39 @@ a:hover {
     color: hsl(0deg 0% 30%);
     margin-top: -2em;
 }
+
+#book {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 1em var(--shadow);
+    padding: .1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3mm;
+    color: hsl(0deg 0% 30%);
+    margin-top: -2em;
+}
+
+#author {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 1em var(--shadow);
+    padding: .1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3mm;
+    color: hsl(0deg 0% 30%);
+    margin-top: -2em;
+}
+
+#review-bookLog {
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 1em var(--shadow);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 3mm;
+    color: hsl(0deg 0% 30%);
+    margin-top: -2em;
+}

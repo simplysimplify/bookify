@@ -12,8 +12,7 @@ let restartBtn = document.createElement("a")
 //setting the start page
 quizElement.style.display = "none";
 // gameOverElement.style.display = "none";
-
-consoled()
+takeAgainButton.style.display = "none";
 
 function consoled() {
     console.log(quizStarted)
@@ -75,9 +74,9 @@ function writeQuestion() {
 
 
 function newQuestion() {
-  questionElement.textContent = questions[1].title;
+    questionElement.textContent = questions[1].title;
 
-      for (let i = 0; i < questions[1].choices.length; i++) {
+        for (let i = 0; i < questions[1].choices.length; i++) {
         let answerButton = document.createElement("button");
         answerButton.textContent = questions[1].choices[i];
         answerButton.setAttribute("class", "answer-button btn btn-light m-2 text-left");
@@ -114,8 +113,10 @@ function newQuestion2() {
 
 // ends quiz
 function quizOver() {
-    quizElement.style.display = "none"
+    quizElement.style.display = "none";
+    quizOverElement.style.display = "flex";
     questions = [question1, question2, question3, question4];
+    takeAgainButton.style.display = "flex";
     body.removeChild(restartBtn)
 }
 

@@ -3,23 +3,23 @@ const withAuth = require("../utils/auth");
 const axios = require("axios");
 
 router.get("/", async (req, res) => {
-  res.render("homepg", { loggedIn: req.session.loggedIn });
+  res.render("homepg");
 });
 
 router.get("/discover", withAuth, async (req, res) => {
-  res.render("discoverpg", { loggedIn: req.session.loggedIn });
+  res.render("discoverpg");
 });
 
 router.get("/quiz", withAuth, async (req, res) => {
-  res.render("quiz", { loggedIn: req.session.loggedIn });
+  res.render("quiz");
 });
 
 router.get("/login", async (req, res) => {
-  res.render("login", { loggedIn: req.session.loggedIn });
+  res.render("login");
 });
 
 router.get("/signUp", async (req, res) => {
-  res.render("signUp", { loggedIn: req.session.loggedIn });
+  res.render("signUp");
 });
 
 router.get("/discover/genre/:genre_name", async (req, res) => {

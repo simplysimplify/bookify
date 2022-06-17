@@ -98,10 +98,13 @@ function newQuestion2() {
 
 // ends quiz
 function quizOver() {
-    quizElement.style.display = "none";
+    quizElement.style.display = "none"
     quizOverElement.style.display = "flex";
     questions = [question1, question2, question3, question4];
+<<<<<<< HEAD
     
+=======
+>>>>>>> main
 }
 
 

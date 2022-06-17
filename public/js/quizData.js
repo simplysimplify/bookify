@@ -108,6 +108,7 @@ function newQuestion2() {
 function quizOver() {
     quizElement.style.display = "none"
     questions = [question1, question2, question3, question4];
+
     body.removeChild(restartBtn)
     quizElement.style.display = "flex";
     const userData =  [

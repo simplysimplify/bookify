@@ -40,7 +40,11 @@
         </a>
       </h5>
       <div>
-        <a id="signup" class="btn bg-transparent" href="/signUp">Sign-Up</a>
+        {{#if loggedIn}}
+          <a id="booklog" class="btn bg-transparent" href="/booklog">My Book Log</a>
+        {{else}}
+          <a id="signup" class="btn bg-transparent" href="/signUp">Sign-Up</a>
+        {{/if}}
         {{#if loggedIn}}
           <a id="logout" class="btn bg-transparent">Logout</a>
         {{else}}

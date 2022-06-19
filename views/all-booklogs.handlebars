@@ -1,0 +1,12 @@
+<div class="posts list-group">
+    {{#each reviews}}
+    <a class="list-item flex-row justify-space-between" href="/booklog/{{id}}">
+        <span>{{title}}</span>
+        <span>{{format_date createdAt}}</span>
+    </a>
+    {{/each}}
+</div>
+
+<footer class="footer flex-row justify-center">
+    <a href="/booklog/new-review">➕ Add a Review</a>
+</footer>

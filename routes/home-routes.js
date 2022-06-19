@@ -6,11 +6,11 @@ router.get("/", async (req, res) => {
   res.render("homepg", { loggedIn: req.session.loggedIn });
 });
 
-router.get("/discover", async (req, res) => {
+router.get("/discover", withAuth, async (req, res) => {
   res.render("discoverpg", { loggedIn: req.session.loggedIn });
 });
 
-router.get("/quiz", async (req, res) => {
+router.get("/quiz", withAuth, async (req, res) => {
   res.render("quiz", { loggedIn: req.session.loggedIn });
 });
 

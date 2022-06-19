@@ -1,30 +1,30 @@
 :root {
-    --primary: #d1c8c0;
-    --secondary: rgb(150, 140, 130);
-    --light: rgba(150, 140, 130, 0.3);
-    --dark: rgb(41, 39, 38);
-    --shadow: rgb(108, 107, 107);
+  --primary: #d1c8c0;
+  --secondary: rgb(150, 140, 130);
+  --light: rgba(150, 140, 130, 0.3);
+  --dark: rgb(41, 39, 38);
+  --shadow: rgb(108, 107, 107);
 }
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Gravitas One', cursive;
-    font-family: 'Rozha One', serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Gravitas One", cursive;
+  font-family: "Rozha One", serif;
 }
 
 body {
-    background-color: var(--primary);
-    padding: 3rem;
+  background-color: var(--primary);
+  padding: 3rem;
 }
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 a:hover {
-    text-shadow: 2px 3px white;
-    text-decoration: none;
-    color: white;
+  text-shadow: 2px 3px white;
+  text-decoration: none;
+  color: white;
 }
 /* p {
     font-size: 2rem;
@@ -34,189 +34,186 @@ a:hover {
 /* HEADER =nav bar*/
 
 .header {
-    display: flex;
-    /* expands the uls and logo to the edges */
-    justify-content: space-between;
-    margin: 2rem;
-    padding: 2rem;
-    font-family: 'Gravitas One', cursive;
-    font-family: 'Rozha One', serif;
-    color: black;
-    letter-spacing: 0.3rem; 
-    height: 12vh;
-} 
+  display: flex;
+  /* expands the uls and logo to the edges */
+  justify-content: space-between;
+  margin: 2rem;
+  padding: 2rem;
+  font-family: "Gravitas One", cursive;
+  font-family: "Rozha One", serif;
+  color: black;
+  letter-spacing: 0.3rem;
+  height: 12vh;
+}
 
 .header div {
-    padding-top: 3rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    text-align: right;
-    display: inline;
-    font-family: 'Gravitas One', cursive;
-    font-family: 'Rozha One', serif;
-    font-size: 2rem;
-    color: rgb(238, 231, 217);
+  padding-top: 3rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  text-align: right;
+  display: inline;
+  font-family: "Gravitas One", cursive;
+  font-family: "Rozha One", serif;
+  font-size: 2rem;
+  color: rgb(238, 231, 217);
 }
 
 .header div ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .header div ul li {
-    display: inline-block;
-    margin-left: 2rem;
-    text-decoration: none;
-    font-size: larger;
-};
+  display: inline-block;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-size: larger;
+}
 
 #logo {
-    width: 1rem;
+  width: 1rem;
 }
 
 .btn {
-    border: none;
-    border-radius: 3mm;
-    background-color: white;
-    color: var(--dark);
-    padding: 14px 28px;
-    font-size: 2rem;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Gravitas One', cursive;
-    font-family: 'Rozha One', serif;
+  border: none;
+  border-radius: 3mm;
+  background-color: white;
+  color: var(--dark);
+  padding: 14px 28px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Gravitas One", cursive;
+  font-family: "Rozha One", serif;
 }
 
 #start-btn:hover {
-    text-shadow: 2px 3px whitesmoke;
-    text-decoration: none;
+  text-shadow: 2px 3px whitesmoke;
+  text-decoration: none;
 }
 
 #logo {
-    width: 45%;
+  width: 45%;
 }
 
 #bookify-nav {
-    height: 100%;
-    filter: invert();
+  height: 100%;
+  filter: invert();
 }
 
 #book-quiz-container {
-    font-family: 'Gravitas One', cursive;
-    font-family: 'Rozha One', serif;
-    /* background-image: url("images/books.jpeg"); */
-    height:30rem;
-    border-radius: 5mm;
+  font-family: "Gravitas One", cursive;
+  font-family: "Rozha One", serif;
+  /* background-image: url("images/books.jpeg"); */
+  height: 30rem;
+  border-radius: 5mm;
 }
 
 #book-quiz-container h1 {
-    font-size: 9rem;
-    color: black;
-    text-shadow: 2px 3px white;
+  font-size: 9rem;
+  color: black;
+  text-shadow: 2px 3px white;
 }
-
-
 
 /*login/signUp cards*/
 
-
-
-#username-signup{
-    background: hsl(0deg 0% 100%);
-        box-shadow: 0 0 1em var(--shadow);
-        padding: .1em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        border-radius: 3mm;
-        color: hsl(0deg 0% 30%);
-        margin-top: -2em;
-    }
-    
-
-
-#email-signup{
-        background: hsl(0deg 0% 100%);
-        box-shadow: 0 0 1em var(--shadow);
-        padding: .1em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        border-radius: 3mm;
-        color: hsl(0deg 0% 30%);
-        margin-top: -2em;
+#username-signup {
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
 }
-    
 
-#password-signup{
-    background: hsl(0deg 0% 100%);
-        box-shadow: 0 0 1em var(--shadow);
-        padding: .1em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        border-radius: 3mm;
-        color: hsl(0deg 0% 30%);
-        margin-top: -2em;
-    }
+#email-signup {
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
+}
 
+#password-signup {
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
+}
 
 #email-login {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 1em var(--shadow);
-    padding: .1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 3mm;
-    color: hsl(0deg 0% 30%);
-    margin-top: -2em;
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
 }
 
-
 #password-login {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 1em var(--shadow);
-    padding: .1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 3mm;
-    color: hsl(0deg 0% 30%);
-    margin-top: -2em;
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
 }
 
 #book {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 1em var(--shadow);
-    padding: .1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 3mm;
-    color: hsl(0deg 0% 30%);
-    margin-top: -2em;
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
 }
 
 #author {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 1em var(--shadow);
-    padding: .1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 3mm;
-    color: hsl(0deg 0% 30%);
-    margin-top: -2em;
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
 }
 
 #review-bookLog {
-    background: hsl(0deg 0% 100%);
-    box-shadow: 0 0 1em var(--shadow);
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    border-radius: 3mm;
-    color: hsl(0deg 0% 30%);
-    margin-top: -2em;
+  background: hsl(0deg 0% 100%);
+  box-shadow: 0 0 1em var(--shadow);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 3mm;
+  color: hsl(0deg 0% 30%);
+  margin-top: -2em;
+}
+
+#question {
+  color: white;
+  font-size: 40px;
+  text-align: center;
 }

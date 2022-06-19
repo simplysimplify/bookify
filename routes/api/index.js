@@ -3,7 +3,7 @@ const router = require("express").Router();
 const userRoutes = require('./user-routes');
 const BookGenre = require('./BookGenre')
 const BookID = require('./BookID')
-const BookReview =require('./book-routes')
+const BookReview =require('./booklog-routes')
 
 router.use("/users", userRoutes);
 router.use("/books", BookGenre);

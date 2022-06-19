@@ -5,10 +5,11 @@ const newFormHandler = async function (event) {
   const author = document.querySelector('input[name="book-author"]').value;
   const body = document.querySelector('textarea[name="book-body"]').value;
 
-  await fetch(`/api/post`, {
+  await fetch(`/api`, {
     method: "POST",
     body: JSON.stringify({
       title,
+      author,
       body,
     }),
     headers: { "Content-Type": "application/json" },

@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Review } = require("../../models/Review");
-const withAuth = require("../../utils/auth");
+const { Review } = require("../models/Review");
+const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -21,11 +21,10 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/new-review", withAuth, (req, res) => {
+router.get("/booklog/new-review", withAuth, (req, res) => {
   res.render("new-booklog", {
     layout: "booklog-main",
   });
 });
-
 
 module.exports = router;

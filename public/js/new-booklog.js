@@ -5,7 +5,7 @@ const newFormHandler = async function (event) {
   const author = document.querySelector('input[name="book-author"]').value;
   const body = document.querySelector('textarea[name="book-body"]').value;
 
-  await fetch(`/api`, {
+  await fetch(`/booklog/all-booklogs`, {
     method: "POST",
     body: JSON.stringify({
       title,

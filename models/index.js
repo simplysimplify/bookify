@@ -19,6 +19,11 @@ Review.belongsTo(User, {
     foreignKey: 'userId',
     onDelete:'CASCADE'
 })
+
+User.hasMany(Review, {
+  foreignKey: "reviewId",
+  onDelete: "CASCADE",
+});
 module.exports = {
     User,
     Book,

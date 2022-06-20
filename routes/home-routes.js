@@ -32,11 +32,12 @@ router.get("/signUp", async (req, res) => {
 });
 
 router.get("/booklog", async (req, res) => {
-  res.render("booklog-main", { loggedIn: req.session.loggedIn });
+  res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });
 router.get("/booklog/new-review", async (req, res) => {
   res.render("new-booklog", { loggedIn: req.session.loggedIn });
 });
+
 router.get("/booklog/all-booklogs", async (req, res) => {
   res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });

@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { Review } = require("../models/Review");
+const { Review } = require("../models/");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/booklog/all-booklogs", withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       where: {
@@ -21,10 +21,14 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/booklog/new-review", withAuth, (req, res) => {
-  res.render("new-booklog", {
-    layout: "booklog-main",
-  });
+router.post("/", wiwhAuth, async (req, res) => {
+  try {
+    const reviewData = await Review.create(req.body);
+    res.status(200).json(reviewData);
+  } catch (err) {
+res.redirect("login");  }
 });
+
+
 
 module.exports = router;

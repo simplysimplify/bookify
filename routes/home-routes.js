@@ -27,11 +27,12 @@ router.get("/signUp", async (req, res) => {
 });
 
 router.get("/booklog", async (req, res) => {
-  res.render("booklog-main", { loggedIn: req.session.loggedIn });
+  res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });
 router.get("/booklog/new-review", async (req, res) => {
   res.render("new-booklog", { loggedIn: req.session.loggedIn });
 });
+
 router.get("/booklog/all-booklogs", async (req, res) => {
   res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });
@@ -64,10 +65,10 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
   }
 });
 
-router.get("/quiz/bookrecs/:genre_name", async (req, res) => {
+router.get("/quiz/bookrecs/:recs_name", async (req, res) => {
   try {
-    const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/nominees/${req.params.genre_name}/2021`,
+    const res = await axios.get(
+      `https://hapi-books.p.rapidapi.com/nominees/${req.params.recs_name}/2021`,
       {
         headers: {
           "X-RapidAPI-Key":
@@ -77,14 +78,14 @@ router.get("/quiz/bookrecs/:genre_name", async (req, res) => {
       }
     );
     //spread op- for all bookObj, recreating and applying summary
-    response.data = response.data.map((bookObj) => {
+    res.data = res.data.map((bookObj) => {
       return { ...bookObj, summary: bookObj.name.slice(0, 25) + "..." };
     });
-    console.log(response.data);
-    res.render("genres", {
+    console.log(res.data);
+    res.render("bookrecs", {
       loggedIn: req.session.loggedIn,
-      genre_name: req.params.genre_name,
-      genreData: response.data,
+      recs_name: req.params.recs_name,
+      recsData: res.data,
     });
   } catch (err) {
     console.log(err);

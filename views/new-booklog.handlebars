@@ -2,18 +2,18 @@
     <div class="card-header">
         <h2>Add a New Review</h2>
     </div>
-    <form id="new-book-form" class="card-body">
-        <label class="form-label" for="book-title">Book Title</label>
-        <input type="text" name="book-title" class="form-input" />
-        <label class="form-label" for="book-author">Author</label>
-        <input type="text" name="book-author" class="form-input" />
+    <form id="new-book-form" class="card-body" action="/booklog/all-booklogs" method="POST">
+        <label class="form-label" for="title">Book Title</label>
+        <input type="text" name="title" class="form-input" />
+        <label class="form-label" for="author">Author</label>
+        <input type="text" name="author" class="form-input" />
 
-        <label class="form-label" for="book-body">Review</label>
-        <textarea name="book-body" class="form-input"></textarea>
+        <label class="form-label" for="body">Review</label>
+        <textarea name="body" class="form-input"></textarea>
 
-       <a href="/booklog/all-booklogs" type="submit" class = "btn">Create</a> 
+       <button type="submit" class = "btn">Create</button> 
        {{!-- <button type="submit" class="btn">Create</button> --}}
     </form>
 </div>
 
-<script src="/js/new-booklog.js"></script>
+{{!-- <script src="/js/new-booklog.js"></script> --}}

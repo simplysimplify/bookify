@@ -1,35 +1,40 @@
 const router = require("express").Router();
-const { Review } = require("../models/");
+const { Review, User } = require("../models/");
 const withAuth = require("../utils/auth");
 
-router.get("/booklog/all-booklogs", withAuth, async (req, res) => {
+// router.get("/", withAuth, async (req, res) => {
+//   try {
+//     const reviewData = await Review.findAll({
+//       where: {
+//         user_id: req.session.user_id,
+//       },
+//     });
+
+//     const reviews = reviewData.map((review) => review.get({ plain: true }));
+
+//     res.render("all-booklogs", {
+//       // layout: "booklog-main",
+//       reviews,
+//     });
+//   } catch (err) {
+//     res.redirect("login");
+//   }
+// });
+
+router.post("/all-booklogs", withAuth, async (req, res) => {
   try {
-    const reviewData = await Review.findAll({
+
+    const currentReview = await Review.create(
+      req.body
+    );
+    const currentUser = await User.findOne({
       where: {
-        user_id: req.session.user_id,
-      },
-    });
-
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
-
-    res.render("all-booklogs", {
-      layout: "booklog-main",
-      reviews,
-    });
-  } catch (err) {
-    res.redirect("login");
-  }
-});
-
-router.post("/booklog/all-booklogs", withAuth, async (req, res) => {
-  try {
-    const reviewData = await Review.create({
-      where: {
-        title: req.session.title,
-        review_id: req.session.review_id,
+        id: req.session.user_id
       }
-    });
-    res.status(200).json(reviewData);
+    })
+    await currentUser.addReview(currentReview)
+    // res.status(200).json(reviewData);
+    res.redirect("/booklog")
   } catch (err) {
     res.redirect("login");
   }

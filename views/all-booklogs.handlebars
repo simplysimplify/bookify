@@ -1,8 +1,8 @@
 <div class="posts list-group">
     {{#each reviews}}
-    <a class="list-item flex-row justify-space-between" href="/booklog/{{id}}">
+    <a class="list-item bg-dark flex-row justify-space-between my-2" style="height: 2rem;border-radius: 2.5mm" href="/booklog/review/{{id}}" >
         <span>{{title}}</span>
-        <span>{{format_date createdAt}}</span>
+        {{!-- <span>{{format_date createdAt}}</span> --}}
     </a>
     {{/each}}
 </div>

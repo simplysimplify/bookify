@@ -1,6 +1,11 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const axios = require("axios");
+function get() {
+  var recs_name = sessionStorage.getItem("userGenre");
+  var recs_year = sessionStorage.getItem("searchYear");
+  console.log(userGenre);
+}
 
 router.get("/", async (req, res) => {
   res.render("homepg", { loggedIn: req.session.loggedIn });
@@ -64,54 +69,32 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
   }
 });
 
-router.get("/quiz/bookrecs/:genre_name", async (req, res) => {
+router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/nominees/${req.params.genre_name}/2021`,
+      `https://hapi-books.p.rapidapi.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
       {
         headers: {
           "X-RapidAPI-Key":
-            "9cb82c8a29mshe86394bfe0926b3p177498jsn75cf10ba9874",
+            "d5b7852d0amshae97f9f551ea2a3p1e6b2djsn39ffa901b56b",
           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
         },
       }
     );
     //spread op- for all bookObj, recreating and applying summary
     response.data = response.data.map((bookObj) => {
-      return { ...bookObj, summary: bookObj.name.slice(0, 25) + "..." };
+      return { ...bookObj, summary: bookObj.name.slice(0, 20) + "..." };
     });
     console.log(response.data);
-    res.render("genres", {
+    res.render("bookrecs", {
       loggedIn: req.session.loggedIn,
-      genre_name: req.params.genre_name,
-      genreData: response.data,
+      recs_name: req.params.recs_name,
+      recsData: response.data,
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
-// router.get("/booklog/:book_name", async (req, res) => {
-//   try {
-//     const options = await axios.get(
-//       `https://hapi-books.p.rapidapi.com/search/${req.params.book_name}`,
-//       {
-//         headers: {
-//           "X-RapidAPI-Key":
-//             "9cb82c8a29mshe86394bfe0926b3p177498jsn75cf10ba9874",
-//           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
-//         },
-//       }
-//     );
-//     const { name, cover } = options.data[0];
-//     res.render("bookLog", { book: { name, cover } });
-//     // console.log(options);
-//     // res.status(200).json(options.data[0]);
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;

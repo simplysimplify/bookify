@@ -21,11 +21,16 @@ a {
   color: white;
   text-decoration: none;
 }
-a:hover {
-  text-shadow: 2px 3px white;
-  text-decoration: none;
+#booklog:hover, #signup:hover, #logout:hover, #login:hover {
   color: white;
+  text-decoration: none;
 }
+
+
+#new-review:hover {
+  color: black
+}
+
 /* p {
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;

@@ -6,8 +6,7 @@
 </div>
 <div class="container">
   <div class="row">
-{{recs_name}}
-{{#each recsData}}
+{{#each recsData as |book|}}
 {{>bookdetails}}
 {{/each}}
 </div>

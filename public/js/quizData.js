@@ -4,7 +4,6 @@ const userAnswers = [];
 
 let genres = [
   "Science-Fiction", //
-  "Finance", //no
   "Romance", //
   "Memoir-Autobiography", //
   "Horror", //

@@ -5,10 +5,9 @@ class Review extends Model {}
 
 Review.init(
   {
-    body: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    title: DataTypes.STRING,
+    author: DataTypes.STRING,
+    body: DataTypes.STRING,
   },
   {
     sequelize,

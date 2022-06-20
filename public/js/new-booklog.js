@@ -1,6 +1,7 @@
 const newFormHandler = async function (event) {
   event.preventDefault();
 
+  console.log("submit review")
   const title = document.querySelector('input[name="book-title"]').value;
   const author = document.querySelector('input[name="book-author"]').value;
   const body = document.querySelector('textarea[name="book-body"]').value;

@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 #booklog:hover, #signup:hover, #logout:hover, #login:hover {
- color: white;
+  color: white;
   text-decoration: none;
 }
 

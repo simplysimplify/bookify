@@ -3,29 +3,24 @@ var currentQ = 0;
 const userAnswers = [];
 
 let genres = [
-  "Sci-Fi",
-  "Finance",
-  "Romance",
-  "Autobiography",
-  "Horror",
-  "Mystery",
-  "History",
-  "Thriller",
-  "Fantasy",
-  "Adventure",
-  "Detective",
-  "True-Crime",
-  "Literary-Fiction",
-  "Poetry",
+  "Science-Fiction", //
+  "Finance", //no
+  "Romance", //
+  "Memoir-Autobiography", //
+  "Horror", //
+  "Mystery", //
+  "History", //
+  "Mystery-Thriller", //
+  "Fantasy", //
+  "Poetry", //
 ];
 
 for (let i = genres.length - 1; i >= 1; i--) {
-  let j = Math.floor(Math.random() * (i + 1)); // 0 <= j <= i
+  let j = Math.floor(Math.random() * (i + 1));
   let temp = genres[j];
   genres[j] = genres[i];
   genres[i] = temp;
 }
-console.log(genres);
 
 //Declaration of elements
 const question = document.getElementById("question");
@@ -48,6 +43,7 @@ const answers = [
 
 changeQandA();
 
+var answer = "";
 function changeQandA() {
   (question.innerHTML = questions[currentQ]),
     (btn1.innerHTML = answers[currentQ][0]);
@@ -59,9 +55,10 @@ function changeQandA() {
 btn1.addEventListener("click", function () {
   userAnswers[currentQ] = this.textContent;
   console.log(userAnswers);
+  answer = userAnswers[0].toLocaleLowerCase();
   currentQ++;
   if (currentQ === questions.length) {
-    document.location.replace("/bookrecs");
+    document.location.replace("/bookrecs/" + answer + "/" + years[0]);
   }
   store();
   changeQandA();
@@ -70,9 +67,11 @@ btn1.addEventListener("click", function () {
 btn2.addEventListener("click", function () {
   userAnswers[currentQ] = this.textContent;
   console.log(userAnswers);
+  answer = userAnswers[0].toLocaleLowerCase();
   currentQ++;
   if (currentQ === questions.length) {
-    document.location.replace("/bookrecs");
+    //document.location.replace("/bookrecs");
+    document.location.replace("/bookrecs/" + answer + "/" + years[0]);
   }
   store();
   changeQandA();
@@ -81,9 +80,10 @@ btn2.addEventListener("click", function () {
 btn3.addEventListener("click", function () {
   userAnswers[currentQ] = this.textContent;
   console.log(userAnswers);
+  answer = userAnswers[0].toLocaleLowerCase();
   currentQ++;
   if (currentQ === questions.length) {
-    document.location.replace("/bookrecs");
+    document.location.replace("/bookrecs/" + answer + "/" + years[0]);
   }
   store();
   changeQandA();
@@ -92,20 +92,38 @@ btn3.addEventListener("click", function () {
 btn4.addEventListener("click", function () {
   userAnswers[currentQ] = this.textContent;
   console.log(userAnswers);
+  answer = userAnswers[0].toLocaleLowerCase();
   currentQ++;
   if (currentQ === questions.length) {
-    document.location.replace("/bookrecs");
+    document.location.replace("/bookrecs/" + answer + "/" + years[0]);
   }
   store();
   changeQandA();
 });
 
+let years = [
+  "2021",
+  "2020",
+  "2019",
+  "2018",
+  "2017",
+  "2016",
+  "2015",
+  "2014",
+  "2013",
+  "2012",
+];
+
+for (let i = years.length - 1; i >= 1; i--) {
+  let j = Math.floor(Math.random() * (i + 1));
+  let temp = years[j];
+  years[j] = years[i];
+  years[i] = temp;
+}
+
 function store() {
-  var userGenre = userAnswers[0];
-  // var userLength = userAnswers[1];
-  // var userFic = userAnswers[2];
+  var userGenre = userAnswers[0],
+    searchYear = years[0];
   sessionStorage.setItem("userGenre", userGenre);
-  // sessionStorage.setItem("userLength", userLength);
-  // sessionStorage.setItem("userFic", userFic);
-  console.log(userGenre);
+  sessionStorage.setItem("searchYear", searchYear);
 }

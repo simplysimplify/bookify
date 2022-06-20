@@ -1,4 +1,4 @@
-const User = require("./User");
+const User = require("./user");
 const Book = require('./Book');
 const Review = require('./Review')
 //a review belongs to one book

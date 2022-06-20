@@ -5,12 +5,12 @@ const Review = require('./Review')
 
 //a review belongs to one user 
 Review.belongsTo(User, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete:'CASCADE'
 })
 
 User.hasMany(Review, {
-  foreignKey: "reviewId",
+  foreignKey: "review_id",
   onDelete: "CASCADE",
 });
 module.exports = {

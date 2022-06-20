@@ -6,7 +6,7 @@ router.get("/booklog/all-booklogs", withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       where: {
-        userId: req.session.userId,
+        user_id: req.session.user_id,
       },
     });
 
@@ -21,14 +21,19 @@ router.get("/booklog/all-booklogs", withAuth, async (req, res) => {
   }
 });
 
-router.post("/", wiwhAuth, async (req, res) => {
+router.post("/booklog/all-booklogs", withAuth, async (req, res) => {
   try {
-    const reviewData = await Review.create(req.body);
+    const reviewData = await Review.create({
+      where: {
+        title: req.session.title,
+        review_id: req.session.review_id,
+      }
+    });
     res.status(200).json(reviewData);
   } catch (err) {
-res.redirect("login");  }
+    res.redirect("login");
+  }
 });
-
 
 
 module.exports = router;

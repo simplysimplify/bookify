@@ -1,8 +1,19 @@
 ![bookify logo](./public/images/bookify.png)
+[![MIT](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://choosealicense.com/licenses/mit/)
 
 # Initiative
-
+```
 Book searcher and aggregate which functions to gather and present a unique book recomendation library per user.
+```
+# Table of Contents
+
+- [Initiative](#initiative)
+- [Goals](#goals)
+- [Links](#links)
+- [Preview](#preview)
+- [Usage](#usage)
+- [Badges](#badges)
+- [Questions](#questions)
 
 # Goals:
 
@@ -19,9 +30,13 @@ https://bookify-project-du.herokuapp.com
 GitHub Repo
 https://github.com/simplysimplify/bookify
 
+# Preview
+![gif](./public/images/preview.gif)
+
 # Usage:
 
 After creating an account the user can choose to browse the full selection of genres offered by the API or take a quiz to generate a list of books which might suit their preferences. Alternatively the user can use the book logs menus to enter books that they have already read (or books they are simply not interested in) which will whitelist the app from displaying them in any listings.
+
 
 # Questions:
 

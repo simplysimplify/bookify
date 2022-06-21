@@ -11,6 +11,7 @@ Book searcher and aggregate which functions to gather and present a unique book 
 - [Goals](#goals)
 - [Links](#links)
 - [Preview](#Preview)
+- [Installation](#Installation)
 - [Usage](#usage)
 - [Badges](#badges)
 - [Questions](#questions)
@@ -31,8 +32,19 @@ GitHub Repo
 https://github.com/simplysimplify/bookify
 
 
+
+
+# Installation
+
+1. Clone this SSH Key link: "git@github.com:addiguskey/SQL-Employee-Tracker.git" on your Terminal (Mac) or gitBash(Windows).
+
+2. This app uses [Axios](https://www.npmjs.com/package/axios),[bcrypt](https://www.npmjs.com/package/bcrypt), [mysql2](https://www.npmjs.com/package/mysql2), [handlebars](https://www.npmjs.com/package/handlebars), [dotenv](https://www.npmjs.com/package/dotenv), and [express](https://www.npmjs.com/package/express). You can simply install npm Express by running "npm i" on your Integrated Terminal in VS-Code
+
+3. Click [Preview](#preview) for a step-by-step video demo of this application.
+
 # Preview
 ![gif](./public/images/preview.gif)
+
 
 # Usage:
 

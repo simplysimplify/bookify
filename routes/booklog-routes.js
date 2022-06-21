@@ -40,5 +40,24 @@ router.post("/all-booklogs", withAuth, async (req, res) => {
   }
 });
 
+router.get('/review/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Review.findByPk(req.params.id);
+
+    if (postData) {
+      const post = postData.get({ plain: true });
+
+      res.render('reviews', {
+        layout: 'main',
+        loggedIn: req.session.loggedIn,
+        post,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect('login');
+  }
+});
 
 module.exports = router;

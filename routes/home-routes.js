@@ -32,6 +32,8 @@ router.get("/signUp", async (req, res) => {
   res.render("signUp", { loggedIn: req.session.loggedIn });
 });
 
+
+
 router.get("/booklog", async (req, res) => {
   // router.get("/", withAuth, async (req, res) => {
     try {
@@ -62,6 +64,7 @@ router.get("/booklog/all-booklogs", async (req, res) => {
   res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });
 
+
 router.get("/discover/genre/:genre_name", async (req, res) => {
   try {
     const response = await axios.get(
@@ -69,7 +72,7 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
       {
         headers: {
           "X-RapidAPI-Key":
-            "9cb82c8a29mshe86394bfe0926b3p177498jsn75cf10ba9874",
+            "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
         },
       }
@@ -97,7 +100,7 @@ router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
       {
         headers: {
           "X-RapidAPI-Key":
-            "d5b7852d0amshae97f9f551ea2a3p1e6b2djsn39ffa901b56b",
+            "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
         },
       }

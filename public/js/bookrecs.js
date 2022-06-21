@@ -13,7 +13,7 @@ function getRecs(genre, year) {
     url: `https://hapi-books.p.rapidapi.com/nominees/${genre}/${year}`,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "62fd737dc8mshdc4b2103750a6cap1678d6jsn9a8771e39bcf",
+      "X-RapidAPI-Key": "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
       "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
     },
   };

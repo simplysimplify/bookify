@@ -65,7 +65,7 @@ router.get("/booklog/all-booklogs", async (req, res) => {
 router.get("/discover/genre/:genre_name", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/week/${req.params.genre_name}`,
+      `https://hapi-books.herokuapp.com/week/${req.params.genre_name}`,
       {
         headers: {
           "X-RapidAPI-Key":
@@ -93,7 +93,7 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
 router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
+      `https://hapi-books.herokuapp.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
       {
         headers: {
           "X-RapidAPI-Key":

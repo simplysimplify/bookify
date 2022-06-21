@@ -5,11 +5,11 @@ function get() {
   var recs_year = sessionStorage.getItem("searchYear");
   console.log(userGenre);
 }
-
+// hapi-books.p.rapidapi.com
 router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
+      `https://hapi-books.herokuapp.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
       {
         headers: {
           "X-RapidAPI-Key":

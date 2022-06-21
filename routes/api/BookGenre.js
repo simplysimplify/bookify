@@ -10,7 +10,7 @@ const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "0edd9c1b88mshb117d5bb18f030dp1c46bfjsn9ea78bf1adf7",
-    "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
+    "X-RapidAPI-Host": "https://hapi-books.herokuapp.com",
   },
 };
 
@@ -19,7 +19,7 @@ router.get('/:bookgenre', async (req, res) => {
   const response = []
   // Gets the top books in a genre in the current week.
   try {
-    const response = await axios.get(`https://hapi-books.p.rapidapi.com/week/${req.params.bookgenre}`, options)
+    const response = await axios.get(`https://hapi-books.herokuapp.com/week/${req.params.bookgenre}`, options)
     console.log(response.data)
   } catch (err) {
     res.status(400).json(err)
@@ -31,7 +31,7 @@ router.get('/:bookgenre', async (req, res) => {
   const response = []
   // Gets the top books in a genre in the current year.
   try {
-    const response = await axios.get(`https://hapi-books.p.rapidapi.com/nominees/${req.params.bookgenre}/2021`, options)
+    const response = await axios.get(`https://hapi-books.herokuapp.com/nominees/${req.params.bookgenre}/2021`, options)
     console.log(response.data)
   } catch (err) {
     res.status(400).json(err)

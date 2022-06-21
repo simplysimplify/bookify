@@ -17,7 +17,7 @@ const options = {
 router.get('/:bookID', async (req, res) => {
   // Gets details regarding the book with associated id.
   try {
-    const response = await axios.get(`https://hapi-books.p.rapidapi.com/book/${req.params.bookID}`, options)
+    const response = await axios.get(`https://hapi-books.herokuapp.com/book/${req.params.bookID}`, options)
     console.log(response.data)
   } catch (err) {
     res.status(400).json(err)

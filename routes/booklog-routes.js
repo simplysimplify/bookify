@@ -60,4 +60,20 @@ router.get('/review/:id', withAuth, async (req, res) => {
   }
 });
 
+
+router.delete('/review/:id', withAuth, async (req, res) => {
+  try{
+    const currentReview = await Review.destroy(
+      {
+        review_id: req.params.review_id
+      })
+
+    if (!currentReview) {
+      res.status(404).json({ message: 'No Review found with this id!' });
+      return;
+    }
+  } catch(err){
+    res.status(500).json(err)
+  }
+})
 module.exports = router;

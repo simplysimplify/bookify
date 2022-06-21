@@ -25,16 +25,12 @@ and be able to record all of my books in one place to look back on
 - The app should use these softwares: Node, Express, Handlebars, SQL, and Sequelize.
 - The app should have persistant data which can be accessed through a local sql server.
 
-# Links:
+# Link:
 
 Live Link
+```
 https://bookify-project-du.herokuapp.com
-
-GitHub Repo
-https://github.com/simplysimplify/bookify
-
-
-
+```
 
 # Installation
 
@@ -43,7 +39,7 @@ https://github.com/simplysimplify/bookify
    git@github.com:simplysimplify/bookify.git
    ```
 
-2. This app uses [Axios](https://www.npmjs.com/package/axios),[bcrypt](https://www.npmjs.com/package/bcrypt), [mysql2](https://www.npmjs.com/package/mysql2), [handlebars](https://www.npmjs.com/package/handlebars), [dotenv](https://www.npmjs.com/package/dotenv), and [express](https://www.npmjs.com/package/express). You can simply install npm Express by running "npm i" on your Integrated Terminal in VS-Code
+2. This app uses [Axios](https://www.npmjs.com/package/axios), [bcrypt](https://www.npmjs.com/package/bcrypt), [mysql2](https://www.npmjs.com/package/mysql2), [handlebars](https://www.npmjs.com/package/handlebars), [dotenv](https://www.npmjs.com/package/dotenv), and [express](https://www.npmjs.com/package/express). You can simply install npm Express by running "npm i" on your Integrated Terminal in VS-Code
 
 3. Click [Preview](#preview) for a step-by-step video demo of this application.
 

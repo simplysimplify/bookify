@@ -52,8 +52,7 @@ router.get("/booklog", async (req, res) => {
       res.redirect("login");
     }
   });
-  // res.render("all-booklogs", { loggedIn: req.session.loggedIn });
-// );
+  
 router.get("/booklog/new-review", async (req, res) => {
   res.render("new-booklog", { loggedIn: req.session.loggedIn });
 });

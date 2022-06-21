@@ -2,25 +2,6 @@ const router = require("express").Router();
 const { Review, User } = require("../models/");
 const withAuth = require("../utils/auth");
 
-// router.get("/", withAuth, async (req, res) => {
-//   try {
-//     const reviewData = await Review.findAll({
-//       where: {
-//         user_id: req.session.user_id,
-//       },
-//     });
-
-//     const reviews = reviewData.map((review) => review.get({ plain: true }));
-
-//     res.render("all-booklogs", {
-//       // layout: "booklog-main",
-//       reviews,
-//     });
-//   } catch (err) {
-//     res.redirect("login");
-//   }
-// });
-
 router.post("/all-booklogs", withAuth, async (req, res) => {
   try {
 

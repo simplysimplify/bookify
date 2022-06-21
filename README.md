@@ -3,7 +3,8 @@
 
 # Initiative
 ```
-Book searcher and aggregate which functions to gather and present a unique book recomendation library per user.
+Book searcher and aggregate which functions to gather and present 
+a unique book recomendation library per user.
 ```
 # Table of Contents
 

@@ -36,7 +36,10 @@ https://github.com/simplysimplify/bookify
 
 # Installation
 
-1. Clone this SSH Key link: "git@github.com:addiguskey/SQL-Employee-Tracker.git" on your Terminal (Mac) or gitBash(Windows).
+1. Clone this SSH Key link on your Terminal (Mac) or gitBash(Windows).
+   ```
+   git@github.com:simplysimplify/bookify.git
+   ```
 
 2. This app uses [Axios](https://www.npmjs.com/package/axios),[bcrypt](https://www.npmjs.com/package/bcrypt), [mysql2](https://www.npmjs.com/package/mysql2), [handlebars](https://www.npmjs.com/package/handlebars), [dotenv](https://www.npmjs.com/package/dotenv), and [express](https://www.npmjs.com/package/express). You can simply install npm Express by running "npm i" on your Integrated Terminal in VS-Code
 

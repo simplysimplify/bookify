@@ -10,6 +10,7 @@ Book searcher and aggregate which functions to gather and present a unique book 
 - [Initiative](#initiative)
 - [Goals](#goals)
 - [Links](#links)
+- [Preview](#Preview)
 - [Usage](#usage)
 - [Badges](#badges)
 - [Questions](#questions)
@@ -29,6 +30,9 @@ https://bookify-project-du.herokuapp.com
 GitHub Repo
 https://github.com/simplysimplify/bookify
 
+
+# Preview
+![gif](./public/images/preview.gif)
 
 # Usage:
 

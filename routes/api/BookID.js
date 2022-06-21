@@ -9,7 +9,7 @@ const axios = require('axios');
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "f692aaa3femsh7cccd252b5d2998p118cb8jsn80bf8949d42a",
+    "X-RapidAPI-Key": "0edd9c1b88mshb117d5bb18f030dp1c46bfjsn9ea78bf1adf7",
     "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
   },
 };

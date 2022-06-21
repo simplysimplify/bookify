@@ -69,7 +69,7 @@ router.get("/discover/genre/:genre_name", async (req, res) => {
       {
         headers: {
           "X-RapidAPI-Key":
-            "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
+            "0edd9c1b88mshb117d5bb18f030dp1c46bfjsn9ea78bf1adf7",
           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
         },
       }
@@ -97,7 +97,7 @@ router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
       {
         headers: {
           "X-RapidAPI-Key":
-            "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
+            "0edd9c1b88mshb117d5bb18f030dp1c46bfjsn9ea78bf1adf7",
           "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
         },
       }

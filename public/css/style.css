@@ -27,7 +27,7 @@ a {
 }
 
 
-#new-review:hover {
+#new-review:hover, #discover:hover {
   color: black
 }
 
@@ -230,3 +230,7 @@ a {
   height: 2.5rem;
   margin-left: 30rem;
   /* Footer height */
+
+#delete-booklog{
+  
+}

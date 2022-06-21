@@ -1,4 +1,4 @@
-<div class="rounded-top bg-light text-dark p-3"><h1><span>{{post.title}}</span></h1></div>
+<div class="rounded-top bg-light text-dark p-3 d-flex flex-column"><h1><span>{{post.title}}</span></h1></div>
 <div id="review-info" class="card-body bg-dark text-light rounded-bottom">
     <h4>Author</h4>
     <p><span>{{post.author}}</post></span></p>
@@ -8,9 +8,10 @@
   <a class="text-dark m-3" href="/booklog">Back to Book Log</a>
   
 </div>
-<div class="row">
+{{!-- Button for another time --}}
+{{!-- <button class=" text-dark " href="/booklog" ><img src="/images/delete.png" alt="delete" id="delete-booklog" style="width: 1rem"></button> --}}
 
-<button class="btn text-dark m-3 d-flex flex-column justify-content-end " href="/booklog" ><img src="/images/delete.png" alt="delete" id="delete-booklog" style="width: 1rem"></button>
-</div>
+
+
 
 <script src="/js/delete-booklog.js"></script>

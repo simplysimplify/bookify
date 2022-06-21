@@ -1,14 +1,15 @@
 ![bookify logo](./public/images/bookify.png)
 [![MIT](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://choosealicense.com/licenses/mit/)
 
-# Initiative
+# User Story
 ```
-Book searcher and aggregate which functions to gather and present 
-a unique book recomendation library per user.
+As a user, I want to spend minimal time looking for the next book to read, 
+get a personalized book recommendation based on my interests, 
+and be able to record all of my books in one place to look back on
 ```
 # Table of Contents
 
-- [Initiative](#initiative)
+- [User Story](#user_story)
 - [Goals](#goals)
 - [Links](#links)
 - [Preview](#Preview)

@@ -1,26 +1,36 @@
 const router = require("express").Router();
 const axios = require("axios");
+function get() {
+  var userGenre = sessionStorage.getItem("userGenre");
+  var recs_year = sessionStorage.getItem("searchYear");
+  console.log(userGenre);
+}
 
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "f692aaa3femsh7cccd252b5d2998p118cb8jsn80bf8949d42a",
-    "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
-  },
-};
-
-router.get("/:bookgenre", async (req, res) => {
-  // Clears variable to repopulate.
-  const response = [];
-  // Gets the top books in a genre in the current year.
+router.get("/bookrecs/:recs_name/:recs_year", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://hapi-books.p.rapidapi.com/nominees/${req.params.bookgenre}/2021`,
-      options
+      `https://hapi-books.p.rapidapi.com/nominees/${req.params.recs_name}/${req.params.recs_year}`,
+      {
+        headers: {
+          "X-RapidAPI-Key":
+            "e692b18ceemshac75a665f1c063ap11319ejsnf2e882d220d2",
+          "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
+        },
+      }
     );
+    //spread op- for all bookObj, recreating and applying summary
+    response.data = response.data.map((bookObj) => {
+      return { ...bookObj, summary: bookObj.name.slice(0, 20) + "..." };
+    });
     console.log(response.data);
+    res.render("bookrecs", {
+      loggedIn: req.session.loggedIn,
+      recs_name: req.params.recs_name,
+      recsData: response.data,
+    });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 

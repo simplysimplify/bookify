@@ -32,29 +32,27 @@ router.get("/signUp", async (req, res) => {
   res.render("signUp", { loggedIn: req.session.loggedIn });
 });
 
-
-
 router.get("/booklog", async (req, res) => {
   // router.get("/", withAuth, async (req, res) => {
-    try {
-      const reviewData = await Review.findAll({
-        where: {
-          user_id: req.session.user_id,
-        },
-      });
+  try {
+    const reviewData = await Review.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
 
-      const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
-      res.render("all-booklogs", {
-        loggedIn: req.session.loggedIn,
-        // layout: "booklog-main",
-        reviews,
-      });
-    } catch (err) {
-      res.redirect("login");
-    }
-  });
-  // res.render("all-booklogs", { loggedIn: req.session.loggedIn });
+    res.render("all-booklogs", {
+      loggedIn: req.session.loggedIn,
+      // layout: "booklog-main",
+      reviews,
+    });
+  } catch (err) {
+    res.redirect("login");
+  }
+});
+// res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 // );
 router.get("/booklog/new-review", async (req, res) => {
   res.render("new-booklog", { loggedIn: req.session.loggedIn });
@@ -63,7 +61,6 @@ router.get("/booklog/new-review", async (req, res) => {
 router.get("/booklog/all-booklogs", async (req, res) => {
   res.render("all-booklogs", { loggedIn: req.session.loggedIn });
 });
-
 
 router.get("/discover/genre/:genre_name", async (req, res) => {
   try {

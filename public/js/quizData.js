@@ -58,8 +58,8 @@ btn1.addEventListener("click", function () {
   currentQ++;
   if (currentQ === questions.length) {
     document.location.replace("/bookrecs/" + answer + "/" + years[0]);
-    quizHide()
-    return
+    quizHide();
+    return;
   }
   store();
   changeQandA();
@@ -73,8 +73,8 @@ btn2.addEventListener("click", function () {
   if (currentQ === questions.length) {
     //document.location.replace("/bookrecs");
     document.location.replace("/bookrecs/" + answer + "/" + years[0]);
-    quizHide()
-    return
+    quizHide();
+    return;
   }
   store();
   changeQandA();
@@ -87,8 +87,8 @@ btn3.addEventListener("click", function () {
   currentQ++;
   if (currentQ === questions.length) {
     document.location.replace("/bookrecs/" + answer + "/" + years[0]);
-    quizHide()
-    return
+    quizHide();
+    return;
   }
   store();
   changeQandA();
@@ -101,8 +101,8 @@ btn4.addEventListener("click", function () {
   currentQ++;
   if (currentQ === questions.length) {
     document.location.replace("/bookrecs/" + answer + "/" + years[0]);
-    quizHide()
-    return
+    quizHide();
+    return;
   }
   store();
   changeQandA();
@@ -136,9 +136,9 @@ function store() {
 }
 
 function quizHide() {
-  question.innerHTML = "Loading Quiz Results!"
-  btn1.setAttribute("style", "display: none")
-  btn2.setAttribute("style", "display: none")
-  btn3.setAttribute("style", "display: none")
-  btn4.setAttribute("style", "display: none")
+  question.innerHTML = "Loading Quiz Results!";
+  btn1.setAttribute("style", "display: none");
+  btn2.setAttribute("style", "display: none");
+  btn3.setAttribute("style", "display: none");
+  btn4.setAttribute("style", "display: none");
 }
